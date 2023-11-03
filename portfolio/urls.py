@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('jevgenij.urls'))
+    path('', include('jevgenij.urls')),
 ]
 # if you want to see images in admin sections use this code:
 if settings.DEBUG:
