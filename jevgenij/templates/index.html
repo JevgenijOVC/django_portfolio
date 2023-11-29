@@ -27,7 +27,6 @@
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                 <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                <li class="nav__item"><a href="#book_store" class="nav__link">BOOK STORE</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
         </div>
@@ -114,12 +113,6 @@
         </div>
     </section>
 
-    <!--===== BOOK STORE =====-->
-    <section class="contact section" id="book_store">
-        <h2 class="section-title">BOOK STORE</h2>
-        <div class="store__container bd-grid">
-        </div>
-    </section>
 
     <!--===== CONTACT =====-->
     <section class="contact section" id="contact">
@@ -139,11 +132,17 @@
 
             <form action="" class="contact__form">
                 <div class="contact__inputs">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="email" placeholder="Email" class="contact__input">
+                    <label>
+                        <input type="text" placeholder="Name" class="contact__input">
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Email" class="contact__input">
+                    </label>
                 </div>
+                <label>
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                </label>
 
-                <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
 
                 <input type="submit" value="Enviable" class="contact__button">
             </form>
@@ -169,15 +168,15 @@
                 <li><a href="#contact" class="footer__link">Contact</a></li>
             </ul>
         </div>
-
+        {# LINK for Following#}
         <div class="footer__data">
             <h2 class="footer__title">FOLLOW</h2>
-            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
-            <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
-            <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+            {% for profile in about.profile_set.all %}
+                <a href="{{ profile.link }}" class="about__social-icon">
+                    <i class="bx bxl-{{ profile.social_name }}"></i>
+                </a>
+            {% endfor %}
         </div>
-
-
     </div>
 </footer>
 

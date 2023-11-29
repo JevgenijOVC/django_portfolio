@@ -63,10 +63,3 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return f'Portfolio {self.id}'
-
-
-# CV SECTION
-
-class MyCv(models.Model):
-    pass
-    # TODO: create model for CV

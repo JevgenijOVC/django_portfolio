@@ -18,6 +18,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (django_portfolio)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="scrollreveal" level="application" />
+    <orderEntry type="library" name="boxicons" level="application" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
@@ -28,7 +30,7 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/jevgenij/templates" />
-        <option value="$MODULE_DIR$/book_store/templates" />
+        <option value="$MODULE_DIR$/ecomm/templates" />
       </list>
     </option>
   </component>
